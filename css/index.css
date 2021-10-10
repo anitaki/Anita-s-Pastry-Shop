@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background-color: rgba(32, 168, 148, 0.5);
+  background-color: rgba(32, 168, 148, 0.55);
   font-family: open sans;
   font-style: normal;
   font-weight: 400;
@@ -136,11 +136,18 @@ footer {
 
 .about {
   height: auto;
-  margin: 10 0px 15px 15px 15px;
   display: flex;
   flex-direction: column;
   align-content: space-around;
 }
+
+.about img {
+  width: 45%;
+  height: 45%;
+  margin: auto;
+  margin-top: 4.5rem;
+}
+
 
 .myButton {
   width: 10rem;
@@ -187,11 +194,6 @@ footer {
   top: 1px;
 }
 
-.about img {
-  width: 45%;
-  height: 45%;
-  margin: auto;
-}
 
 /*Main ------>*/
 
