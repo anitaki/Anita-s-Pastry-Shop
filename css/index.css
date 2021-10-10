@@ -41,34 +41,39 @@ nav ul li {
   padding: 0.5rem;
   text-align: center;
   font-size: 17px;
-   
 }
 
 nav ul li:hover {
-    background-color: rgba(225, 133, 179, 0.5); 
-    border-radius: 45%;
-    font-weight: 750;
+  background-color: rgba(225, 133, 179, 0.5);
+  border-radius: 45%;
+  font-weight: 750;
 }
 
 nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 nav ul li a:hover {
-    color:rgb(12, 90, 80);
-    font-weight: 400;
+  color: rgb(12, 90, 80);
+  font-weight: 400;
 }
 
-h2,
+h2 {
+    text-align: center;
+    margin: 4rem 0 0 0;
+  }
+
 h4 {
   text-align: center;
+  margin: 1rem 0 2rem 0 ;
 }
 
 h3 {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+  margin-top: 7rem;
 }
 
 h1 {
@@ -106,7 +111,59 @@ footer {
 
 .about {
   height: auto;
-  margin: 15px;
+  margin: 10 0px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+ align-content: space-around;
+}
+
+.myButton {
+  width: 10rem;
+  height: 2rem;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-shadow: 3px 4px 0px 0px #899599;
+  background: linear-gradient(
+    to bottom,
+    #ededed 5%,
+    rgba(225, 133, 179, 0.3) 100%
+  );
+  background-color: #ededed;
+  border-radius: 15px;
+  border: 1px solid #d6bcd6;
+  display: inline-block;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 7px 25px;
+
+  text-shadow: 0px 1px 0px #e1e2ed;
+}
+
+.myButton a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  padding: 0.2rem;
+}
+.myButton:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(225, 133, 179, 0.6) 5%,
+    #ededed 100%
+  );
+  background-color: #bab1ba;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.about img {
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }
 
 .category {
