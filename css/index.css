@@ -26,7 +26,6 @@ img {
   height: 150px;
 }
 
-
 div {
   text-align: center;
   border: 5px;
@@ -76,14 +75,12 @@ h4 {
 }
 
 h3 {
- 
   text-align: center;
   margin-top: 9rem;
   font-family: atocha, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 35px;
-  
 }
 
 h1 {
@@ -91,7 +88,7 @@ h1 {
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
- }
+}
 
 span {
   color: teal;
@@ -102,8 +99,6 @@ footer {
   margin-top: 8rem;
 }
 
-
-
 /*Classes*/
 
 /* Header section ------>*/
@@ -112,7 +107,6 @@ footer {
   height: 50px;
   width: 60px;
   transform: rotate(219deg);
-  /*margin-bottom: 15px;*/
 }
 
 .laddle:hover {
@@ -132,10 +126,8 @@ footer {
 .brand-name h1 img:hover {
   transform: rotate(-15deg);
   border-radius: 50%;
-background-color: rgba(32, 168, 148, 0.3);  
+  background-color: rgba(32, 168, 148, 0.3);
 }
-
-
 
 /* About section------>*/
 
@@ -152,7 +144,6 @@ background-color: rgba(32, 168, 148, 0.3);
   margin: auto;
   margin-top: 4.5rem;
 }
-
 
 .myButton {
   width: 10rem;
@@ -199,28 +190,24 @@ background-color: rgba(32, 168, 148, 0.3);
   top: 1px;
 }
 
-
 /*Main section ------>*/
 
 .category {
   display: flex;
   justify-content: space-around;
-  align-content: space-around;
-  align-items: center;
   width: 80%;
   margin: auto;
-  height: 80vh;
+  height: auto;
 }
-
-
 
 .category img:hover {
   width: 75%;
   height: 75%;
- 
-  
 }
 
+.row {
+  width: 33%;
+}
 
 .logo {
   width: 8%;
@@ -232,7 +219,7 @@ background-color: rgba(32, 168, 148, 0.3);
 
 .cakes {
   background-color: rgba(255, 250, 250, 0.8);
- }
+}
 
 .cakes img:hover ~ p {
   font-size: 20px;
@@ -250,7 +237,7 @@ background-color: rgba(32, 168, 148, 0.3);
 .pastries img:hover ~ p {
   font-size: 20px;
   font-weight: 600;
-  background-color: rgba(225, 133, 179,0.5);
+  background-color: rgba(225, 133, 179, 0.5);
   color: rgba(255, 250, 250);
   text-shadow: 10px 10px 10px black;
   border-radius: 1%;
