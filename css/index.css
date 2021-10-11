@@ -238,9 +238,13 @@ footer {
 
 .pastries {
   background-color: rgba(225, 133, 179, 0.5);
-  min-height: 50vh;
+  min-height: 60vh;
   align-items: center;
+    
 }
+
+
+
 
 .pastries img:hover ~ p {
   font-size: 20px;
