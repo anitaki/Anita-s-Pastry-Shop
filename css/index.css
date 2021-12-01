@@ -217,9 +217,12 @@ footer {
   width: 8%;
   height: 8%;
   transform: rotate(-10deg);
+  border-radius: 50%;
+  box-shadow: 1px 1px 15px rgba(255, 250, 250, 0.8);
   /* float: right;
     margin: 2vw ;*/
 }
+
 
 .cakes {
   background-color: rgba(255, 250, 250, 0.8);
@@ -280,3 +283,10 @@ footer {
 .credits {
   font-size: 12px;
 }
+
+
+/*
+@media (max-width: 600px) {
+
+  
+*/
