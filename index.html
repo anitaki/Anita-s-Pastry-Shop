@@ -66,8 +66,30 @@
         <h3 id="cakes">Round Cakes</h3>
         <div class="category cakes">
 
+            <script>
+
+                for (let idx in categProducts){
+                    let x=`${categProducts[idx].category}`
+                    if (x=="cakes"){
+                  
+                  document.write(`<div class="product ${categProducts[idx].class}">
+                  <img src="${categProducts[idx].imageURI}">
+                  <p>${categProducts[idx].name}</p>
+                  </div>`)
+                  
+                 
+                    }
+                    
+                    else {
+                     
+                    }
+                      
+                }
+                
+                </script>
+                 </div>
            
-            <div class="product discount"><img
+            <!-- <div class="product discount"><img
                     src="https://www.laroccacakes.com/wp-content/uploads/2015/11/chocolate_truffle_cake.png"
                     alt="image of a chocolate truffle cake">
                 <p>Chocolate Truffle Cake</p>
@@ -131,13 +153,35 @@
                    
 
 
-        </div>
+        -->
 
         <h3 id="pastries">Pastries</h3>
         <div class="category pastries">
 
+            <script>
 
-            <div class="product"><img src="https://www.papanaretos.gr/wp-content/uploads/2014/04/2.Pasta_BLACK-FOREST.png"
+                for (let idx in categProducts){
+                    let x=`${categProducts[idx].category}`
+                    if (x=="pastries"){
+                  
+                  document.write(`<div class="product ${categProducts[idx].class}">
+                  <img src="${categProducts[idx].imageURI}">
+                  <p>${categProducts[idx].name}</p>
+                  </div>`)
+                  
+                 
+                    }
+                    
+                    else {
+                     
+                    }
+                      
+                }
+                
+                </script>
+
+
+            <!-- <div class="product"><img src="https://www.papanaretos.gr/wp-content/uploads/2014/04/2.Pasta_BLACK-FOREST.png"
                     alt="image of a black forest pastry">
                 <p>Black Forest</p>
             </div>
@@ -152,7 +196,7 @@
             <div class="product"> <img src="https://www.papanaretos.gr/wp-content/uploads/2014/04/1.Pasta_PROFITEROL.png"
                     alt="image of a profiterol pastry">
                 <p>Profiterol</p>
-            </div>
+            </div> -->
         </div>
 
         <h3 id="glutenf">Sugar and Gluten free</h3>
