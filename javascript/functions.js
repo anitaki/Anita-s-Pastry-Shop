@@ -71,6 +71,47 @@ const categProducts = [
     class: "",
   },
 
+  {
+    category: "cakes",
+    name: "Cherry Noire Cake",
+    imageURI:
+      "https://www.laroccacakes.com/wp-content/uploads/2020/01/300669-Classic-Black-Forest_B_small.png",
+    alt: "image of a cherry noire cake",
+    class: "",
+  },
+
+  {
+    category: "cakes",
+    name: "Brown Butter Caramel Praline Cake",
+    imageURI:
+      "https://www.laroccacakes.com/wp-content/uploads/2021/06/300770-Brown-Butter-Caramel-Praline_B_small.png",
+    alt: "image of a brown butter caramel praline cake",
+    class: "",
+  },
+
+  {
+    category: "cakes",
+    name: "Summer Bliss Cake",
+    imageURI:
+      "https://www.laroccacakes.com/wp-content/uploads/2020/01/300626-Summer-Bliss_B_small.png",
+    alt: "image of a summer bliss cake",
+    class: "",
+  },
+
+  {
+    category: "cakes",
+    name: "White Chocolate Cranberry Truffle&nbsp;Cake",
+    imageURI:
+      "https://www.laroccacakes.com/wp-content/uploads/2018/09/300341_B.png",
+    alt: "image of white chocolate cranberry truffle cake",
+    class: "",
+  },
+
+
+                   
+
+
+
 
   {
     category: "pastries",
@@ -81,7 +122,37 @@ const categProducts = [
     class: "",
   },
  
-  
+  {
+    category: "pastries",
+    name: "Caramel",
+    imageURI:
+      "https://www.papanaretos.gr/wp-content/uploads/2014/04/7.Pasta_KARAMELA.png",
+    alt: "image of a caramel pastry",
+    class: "discount",
+  },
+
+  {
+    category: "pastries",
+    name: "Chocolate",
+    imageURI:
+      "https://www.papanaretos.gr/wp-content/uploads/2014/04/9.Pasta_SOKOLATA.png",
+    alt: "image of a chocolate pastry",
+    class: "low",
+  },
+
+  {
+    category: "pastries",
+    name: "Profiterol",
+    imageURI:
+      "https://www.papanaretos.gr/wp-content/uploads/2014/04/1.Pasta_PROFITEROL.png",
+    alt: "image of a profiterol pastry",
+    class: "out",
+  },
+
+
+
+
+
 
 
   {
@@ -99,7 +170,7 @@ const categProducts = [
     imageURI:
       "https://www.cakesonlineaustralia.com.au/wp-content/uploads/2020/01/FlourlessChocMud.png",
     alt: "image of a gluten free flourless chocolate cake",
-    class: "",
+    class: "low",
   },
 
   {
