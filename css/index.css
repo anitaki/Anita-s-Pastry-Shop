@@ -198,18 +198,20 @@ footer {
 
 .category {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 80%;
   margin: auto;
+  padding: 2rem;
 
 }
 
 .category img:hover {
-  width: 75%;
-  height: 75%;
+
+  transform: scale(120%);
 }
 
-.row {
+.product {
   width: 33%;
 }
 
@@ -218,7 +220,7 @@ footer {
   height: 8%;
   transform: rotate(-10deg);
   border-radius: 50%;
-  box-shadow: 1px 1px 15px rgba(255, 250, 250, 0.8);
+  box-shadow: 1px 1px 10px rgba(255, 250, 250), 3px 3px 20px rgb(106, 210, 226);
   /* float: right;
     margin: 2vw ;*/
 }
@@ -230,14 +232,6 @@ footer {
  
 }
 
-.cakes img:hover ~ p {
-  font-size: 20px;
-  font-weight: 600;
-  background-color: rgba(32, 168, 148, 0.85);
-  color: rgba(255, 250, 250);
-  text-shadow: 1px 1px 5px rgba(32, 168, 148, 1);
-  border-radius: 1%;
-}
 
 .pastries {
   background-color: rgba(225, 133, 179, 0.5);
@@ -248,30 +242,19 @@ footer {
 
 
 
-
-.pastries img:hover ~ p {
-  font-size: 20px;
-  font-weight: 600;
-  background-color: rgba(225, 133, 179, 0.5);
-  color: rgba(255, 250, 250);
-  text-shadow: 10px 10px 10px black;
-  border-radius: 1%;
-}
-
 .glutenf {
   background-color: rgb(225, 133, 179);
   min-height: 80vh;
   align-items: center;
 }
 
-.glutenf img:hover ~ p {
-  font-size: 20px;
-  font-weight: 600;
-  background-color: rgb(219, 89, 154, 0.5);
-  color: rgba(255, 250, 250);
-  text-shadow: 10px 10px 10px black;
-  border-radius: 1%;
+
+.discount {
+  background-color: rgba(32, 168, 148, 0.25);
 }
+
+
+
 
 /*----> Footer*/
 
