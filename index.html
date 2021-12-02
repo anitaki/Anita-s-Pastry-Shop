@@ -10,9 +10,23 @@
     <title>Anita's Online Pastry Shop</title>
 
     <script src="javascript/functions.js"></script>
+    <script>
+        function discount(){
+        // const discountedItem = document.getElementsByClassName("discount").item(0).children.item(1)
+        const discountedItem = document.getElementsByClassName("discount")    
+        console.log(discountedItem)
+            var i;
+            for (i = 0; i < discountedItem.length; i++) {
+            discountedItem[i].children.item(1).innerHTML =  discountedItem[i].children.item(1).innerHTML + " " + "<span>Discounted Item!!</span>";
+            }
+        }
+        
+    
+    </script>
 </head>
 
 <body>
+    
     <header id="header">
 
         <div class="brand-name">
@@ -85,75 +99,11 @@
                     }
                       
                 }
-                
+               
                 </script>
                  </div>
            
-            <!-- <div class="product discount"><img
-                    src="https://www.laroccacakes.com/wp-content/uploads/2015/11/chocolate_truffle_cake.png"
-                    alt="image of a chocolate truffle cake">
-                <p>Chocolate Truffle Cake</p>
-            </div>
-
-            <div class="product"><img
-                    src="https://www.laroccacakes.com/wp-content/uploads/2015/11/300256-Jamocha-Almond-Fudge_B_small.png"
-                    alt="image of an almond fudge cake">
-                <p>Almond fudge cake</p>
-            </div>
-            
-            <div class="product"><img src="https://www.laroccacakes.com/wp-content/uploads/2015/11/300188-Carrot_B_small.png"
-                    alt="image of a carrot cake">
-                <p>Carrot Cake</p>
-            </div>
-            
-            <div class="product"><img src="https://www.laroccacakes.com/wp-content/uploads/2017/06/italian_rum_cake.png" 
-                alt="image of italian rum cake">
-            <p>Italian Rum Cake</p>
-        </div>
            
-        
-                <div class="product"><img src="https://www.laroccacakes.com/wp-content/uploads/2021/03/300606-Everything-Chocolate_small-1.png"
-                    alt="image of an everything chocolate cake">
-                <p>Everything Chocolate Cake</p>
-            </div> 
-                <div class="product"><img
-                        src="https://www.laroccacakes.com/wp-content/uploads/2015/11/300273-Milk-Chocolate-Caramel-Cake_small.png"
-                        alt="image of a milk chocolate caramel cake">
-                    <p>Milk Chocolate Caramel Cake</p>
-                </div>
-                <div class="product"><img
-                    src="https://www.laroccacakes.com/wp-content/uploads/2021/06/300771-Apple-Crumble_B_small.png"
-                    alt="image of an apple crumble cake">
-                <p>Apple Crumble Cake</p>
-            </div>
-                                
-                <div class="product"><img src="https://www.laroccacakes.com/wp-content/uploads/2015/11/300317_B-small.png" alt="image of a caramel crunch cake">
-                <p>Caramel Crunch Cake</p></div>
-              
-
-             
-                    <div class="product"><img
-                            src="https://www.laroccacakes.com/wp-content/uploads/2020/01/300669-Classic-Black-Forest_B_small.png"
-                            alt="image of a cherry noire cake">
-                        <p>Cherry Noire Cake</p>
-                    </div>
-
-                    <div class="product"><img src="https://www.laroccacakes.com/wp-content/uploads/2021/06/300770-Brown-Butter-Caramel-Praline_B_small.png"
-                        alt="image of a brown butter caramel praline cake">
-                    <p>Brown Butter Caramel Praline Cake</p>
-                       </div>
-                    
-                    <div class="product"><img src="https://www.laroccacakes.com/wp-content/uploads/2020/01/300626-Summer-Bliss_B_small.png"
-                            alt="image of a summer bliss cake">
-                        <p>Summer Bliss Cake</p>
-                    </div>
-                    
-                    <div class="product"><img src="https://www.laroccacakes.com/wp-content/uploads/2018/09/300341_B.png" alt="image of white chocolate cranberry truffle cake">
-                    <p>White Chocolate Cranberry Truffle&nbsp;Cake</div>
-                   
-
-
-        -->
 
         <h3 id="pastries">Pastries</h3>
         <div class="category pastries">
@@ -181,22 +131,7 @@
                 </script>
 
 
-            <!-- <div class="product"><img src="https://www.papanaretos.gr/wp-content/uploads/2014/04/2.Pasta_BLACK-FOREST.png"
-                    alt="image of a black forest pastry">
-                <p>Black Forest</p>
-            </div>
-            <div class="product"><img src="https://www.papanaretos.gr/wp-content/uploads/2014/04/7.Pasta_KARAMELA.png"
-                    alt="image of a caramel pastry">
-                <p>Caramel</p>
-            </div>
-            <div> <img src="https://www.papanaretos.gr/wp-content/uploads/2014/04/9.Pasta_SOKOLATA.png"
-                    alt="image of a chocolate pastry">
-                <p>Chocolate</p>
-            </div>
-            <div class="product"> <img src="https://www.papanaretos.gr/wp-content/uploads/2014/04/1.Pasta_PROFITEROL.png"
-                    alt="image of a profiterol pastry">
-                <p>Profiterol</p>
-            </div> -->
+           
         </div>
 
         <h3 id="glutenf">Sugar and Gluten free</h3>
@@ -206,35 +141,27 @@
 
 for (let idx in categProducts){
     let x=`${categProducts[idx].category}`
+ 
     if (x=="glutenf"){
   
   document.write(`<div class="product ${categProducts[idx].class}">
   <img src="${categProducts[idx].imageURI}">
-  <p>${categProducts[idx].name}</p>
+ <p>${categProducts[idx].name}</p>
+  <h6></h6>
   </div>`)
-  
- 
     }
     
     else {
-     
     }
-      
+       
 }
 
-</script>
-            <!-- <div class="product"><img
-                    src="https://images.squarespace-cdn.com/content/v1/538500e4e4b0fa9e95efc7b9/1474392514481-YP6YDWSILDGN2OL8VUDD/adj_GF_TurtleCC.png?format=500w">
-                <p>Gluten free turtle cheesecake</p>
-            </div>
-            <div class="product"><img src="https://www.cakesonlineaustralia.com.au/wp-content/uploads/2020/01/FlourlessChocMud.png">
-                <p>Gluten free flourless Chocolate Cake</p>
-            </div>
-            <div class="product"> <img src="https://www.chriskitchen.com.au/wp-content/uploads/2020/08/homepage-header-cake.png">
-                <p>Gluten free Caramel Cake</p>
-            </div>
 
-        </div> -->
+
+   
+
+</script>
+            
 
     </main>
 
@@ -258,7 +185,11 @@ for (let idx in categProducts){
                 <p class="credits">Images from:&nbsp;&nbsp;https://www.laroccacakes.com&nbsp; & &nbsp; https://www.papanaretos.gr &nbsp; & &nbsp; https://media.mallorca-touristguide.com &nbsp; & &nbsp; https://twitter.com/AnitaBakery</p>
     </footer>
 
-
+  
+  <script>
+  discount()
+  </script>  
+  
 </body>
 
 </html>
