@@ -107,12 +107,6 @@ const categProducts = [
     class: "",
   },
 
-
-                   
-
-
-
-
   {
     category: "pastries",
     name: "Black Forest",
@@ -180,8 +174,21 @@ const categProducts = [
       "https://www.chriskitchen.com.au/wp-content/uploads/2020/08/homepage-header-cake.png",
     alt: "image of a gluten free caramel cake",
     class: "",
-  },
-
+  }
 
 
 ];
+
+
+// function discount(){
+//   const discountedItem = document.getElementsByClassName("discount")    
+//   console.log(discountedItem)
+//       for (let i in discountedItem) {
+//       discountedItem[i].children.item(1).innerHTML =  discountedItem[i].children.item(1).innerHTML + "<br> " + "<span>Discounted&nbsp;Item!!</span>";
+//       }
+//   }
+
+
+  
+
+  
