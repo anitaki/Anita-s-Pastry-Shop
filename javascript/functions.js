@@ -5,7 +5,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2015/11/chocolate_truffle_cake.png",
     alt: "image of a chocolate truffle cake",
-    class: "discount",
+    discount: true,
+    low: false,
+    out: false,
   },
 
   {
@@ -14,7 +16,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2015/11/300256-Jamocha-Almond-Fudge_B_small.png",
     alt: "iimage of an almond fudge cake",
-    class: "low",
+    discount: false,
+    low: true,
+    out: false,
   },
 
   {
@@ -23,7 +27,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2015/11/300188-Carrot_B_small.png",
     alt: "image of a carrot cake",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   },
 
   {
@@ -32,7 +38,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2017/06/italian_rum_cake.png",
     alt: "image of italian rum cake",
-    class: "out",
+    discount: false,
+    low: true,
+    out: false,
   },
 
   {
@@ -41,7 +49,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2021/03/300606-Everything-Chocolate_small-1.png",
     alt: "image of an everything chocolate cake",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   },
 
   {
@@ -50,7 +60,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2015/11/300273-Milk-Chocolate-Caramel-Cake_small.png",
     alt: "image of a milk chocolate caramel cake",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   },
 
   {
@@ -59,7 +71,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2021/06/300771-Apple-Crumble_B_small.png",
     alt: "image of an apple crumble cake",
-    class: "discount",
+    discount: true,
+    low: false,
+    out: false,
   },
 
   {
@@ -68,7 +82,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2015/11/300317_B-small.png",
     alt: "image of a caramel crunch cake",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   },
 
   {
@@ -77,7 +93,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2020/01/300669-Classic-Black-Forest_B_small.png",
     alt: "image of a cherry noire cake",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   },
 
   {
@@ -86,7 +104,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2021/06/300770-Brown-Butter-Caramel-Praline_B_small.png",
     alt: "image of a brown butter caramel praline cake",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   },
 
   {
@@ -95,7 +115,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2020/01/300626-Summer-Bliss_B_small.png",
     alt: "image of a summer bliss cake",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   },
 
   {
@@ -104,7 +126,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2018/09/300341_B.png",
     alt: "image of white chocolate cranberry truffle cake",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   },
 
   {
@@ -113,7 +137,9 @@ const categProducts = [
     imageURI:
       "https://www.papanaretos.gr/wp-content/uploads/2014/04/2.Pasta_BLACK-FOREST.png",
     alt: "image of a black forest pastry",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   },
  
   {
@@ -122,7 +148,9 @@ const categProducts = [
     imageURI:
       "https://www.papanaretos.gr/wp-content/uploads/2014/04/7.Pasta_KARAMELA.png",
     alt: "image of a caramel pastry",
-    class: "discount",
+    discount: true,
+    low: false,
+    out: false,
   },
 
   {
@@ -131,7 +159,9 @@ const categProducts = [
     imageURI:
       "https://www.papanaretos.gr/wp-content/uploads/2014/04/9.Pasta_SOKOLATA.png",
     alt: "image of a chocolate pastry",
-    class: "low",
+    discount: true,
+    low: true,
+    out: false,
   },
 
   {
@@ -140,7 +170,9 @@ const categProducts = [
     imageURI:
       "https://www.papanaretos.gr/wp-content/uploads/2014/04/1.Pasta_PROFITEROL.png",
     alt: "image of a profiterol pastry",
-    class: "out",
+    discount: false,
+    low: false,
+    out: true,
   },
 
 
@@ -155,7 +187,9 @@ const categProducts = [
     imageURI:
       "https://images.squarespace-cdn.com/content/v1/538500e4e4b0fa9e95efc7b9/1474392514481-YP6YDWSILDGN2OL8VUDD/adj_GF_TurtleCC.png?format=500w",
     alt: "image of a gluten free turtle cheesecake",
-    class: "discount",
+    discount: true,
+    low: false,
+    out: false,
   },
 
   {
@@ -164,7 +198,9 @@ const categProducts = [
     imageURI:
       "https://www.cakesonlineaustralia.com.au/wp-content/uploads/2020/01/FlourlessChocMud.png",
     alt: "image of a gluten free flourless chocolate cake",
-    class: "low",
+    discount: false,
+    low: true,
+    out: false,
   },
 
   {
@@ -173,7 +209,9 @@ const categProducts = [
     imageURI:
       "https://www.chriskitchen.com.au/wp-content/uploads/2020/08/homepage-header-cake.png",
     alt: "image of a gluten free caramel cake",
-    class: "",
+    discount: false,
+    low: false,
+    out: false,
   }
 
 
