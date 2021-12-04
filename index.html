@@ -92,7 +92,7 @@
 
                 if(categProducts[idx].discount){
                     myDiv.classList.add("discount")
-                    mySpan.innerHTML="<br> Discounted&nbsp;Item!!"
+                    mySpan.innerHTML="<br> Discount! Best Price!!"
 
 
                 }
@@ -141,22 +141,58 @@
 
             <script>
 
-                for (let idx in categProducts){
-                    let x=categProducts[idx].category
-                    if (x=="pastries"){
+for (let idx in categProducts){
+                   
+                   if (categProducts[idx].category==="pastries") {
+               
+               const parentElement=document.getElementById("divPastries")
+               const myDiv=document.createElement("div")               
+               parentElement.appendChild(myDiv)
+               myDiv.className="product"
+               const myImg=document.createElement("img")
+               myImg.src=categProducts[idx].imageURI
+               myDiv.appendChild(myImg)
+               const myP=document.createElement("p")
+               myP.innerHTML=categProducts[idx].name
+               myDiv.appendChild(myP)
+               mySpan=document.createElement("span")
+               myP.appendChild(mySpan)
+             
+              
 
-                  document.write(`<div class="product">
-                  <img src="${categProducts[idx].imageURI}">
-                  <p>${categProducts[idx].name}</p>
-                  </div>`)
-    
-                }
+               if(categProducts[idx].discount){
+                   myDiv.classList.add("discount")
+                   mySpan.innerHTML="<br> Discount! Best Price!!"
 
-                // if(categProducts[idx].discount){
-                //    console.log("d")
+
+               }
+               if(categProducts[idx].low){
+                   myDiv.classList.add("low")
+                   mySpan.innerHTML="<br> Only Few Pastries&nbsp;Left!!"
+                   
+
+               }
+               if(categProducts[idx].out){
+                   myDiv.className="out"
+
+               }
+                   }
+               }
+
+
+
+                // for (let idx in categProducts){
+                //     let x=categProducts[idx].category
+                //     if (x=="pastries"){
+
+                //   document.write(`<div class="product">
+                //   <img src="${categProducts[idx].imageURI}">
+                //   <p>${categProducts[idx].name}</p>
+                //   </div>`)
                 // }
-                      
-                }
+
+                // }
+                  
                 
                 </script>
 
@@ -165,23 +201,65 @@
         </div>
 
         <h3 id="glutenf">Sugar and Gluten free</h3>
-        <div class="category glutenf">
+        <div class="category glutenf" id="divGlutenf">
 
 <script>
 
 for (let idx in categProducts){
-    let x=`${categProducts[idx].category}`
- 
-    if (x=="glutenf"){
-  
-  document.write(`<div class="product ${categProducts[idx].class}">
-  <img src="${categProducts[idx].imageURI}">
- <p>${categProducts[idx].name}</p>
+                   
+                   if (categProducts[idx].category==="glutenf") {
+               
+               const parentElement=document.getElementById("divGlutenf")
+               const myDiv=document.createElement("div")               
+               parentElement.appendChild(myDiv)
+               myDiv.className="product"
+               const myImg=document.createElement("img")
+               myImg.src=categProducts[idx].imageURI
+               myDiv.appendChild(myImg)
+               const myP=document.createElement("p")
+               myP.innerHTML=categProducts[idx].name
+               myDiv.appendChild(myP)
+               mySpan=document.createElement("span")
+               myP.appendChild(mySpan)
+             
+              
 
-  </div>`)
-}  
+               if(categProducts[idx].discount){
+                   myDiv.classList.add("discount")
+                   mySpan.innerHTML="<br> Discount! Best Price!!"
+
+
+               }
+               if(categProducts[idx].low){
+                   myDiv.classList.add("low")
+                   mySpan.innerHTML="<br> Only Few Cakes&nbsp;Left!!"
+                   
+
+               }
+               if(categProducts[idx].out){
+                   myDiv.className="out"
+
+               }
+              
+                   }
+                 
+               }
+               
+
+
+// for (let idx in categProducts){
+//     let x=`${categProducts[idx].category}`
+ 
+//     if (x=="glutenf"){
+  
+//   document.write(`<div class="product ${categProducts[idx].class}">
+//   <img src="${categProducts[idx].imageURI}">
+//  <p>${categProducts[idx].name}</p>
+
+//   </div>`)
+// }  
        
-}
+// }
 
 
 </script>
