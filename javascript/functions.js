@@ -117,7 +117,7 @@ const categProducts = [
     alt: "image of a summer bliss cake",
     discount: false,
     low: false,
-    out: false,
+    out: true,
   },
 
   {

@@ -246,14 +246,19 @@ footer {
 }
 
 
-.discount >img {
+.discount {
   background-color: rgba(32, 168, 148, 0.25);
   border-radius: 15% 40%;
 }
 
-.low >img {
+.low {
+  
   background-color: rgba(255,160,137,0.5);
   border-radius:  40% 15%;
+}
+
+.low span {
+  color: indigo;
 }
 
 .out {
