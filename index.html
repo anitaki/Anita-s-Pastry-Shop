@@ -76,37 +76,34 @@
                     if (categProducts[idx].category==="cakes") {
                 
                 const parentElement=document.getElementById("divCakes")
-                const myDiv1=document.createElement("div")               
-                parentElement.appendChild(myDiv1)
-                myDiv1.className="product"
-                console.log(myDiv1.classList)
-                const myImg1=document.createElement("img")
-                myImg1.src=categProducts[idx].imageURI
-                myDiv1.appendChild(myImg1)
-                const myP1=document.createElement("p")
-                myP1.innerHTML=categProducts[idx].name
-                myDiv1.appendChild(myP1)
+                const myDiv=document.createElement("div")               
+                parentElement.appendChild(myDiv)
+                myDiv.className="product"
+                const myImg=document.createElement("img")
+                myImg.src=categProducts[idx].imageURI
+                myDiv.appendChild(myImg)
+                const myP=document.createElement("p")
+                myP.innerHTML=categProducts[idx].name
+                myDiv.appendChild(myP)
                 mySpan=document.createElement("span")
-                myP1.appendChild(mySpan)
+                myP.appendChild(mySpan)
               
                
 
                 if(categProducts[idx].discount){
-                    myImg1.className="discount"
-                    // myP1.innerHTML= myP1.innerHTML + "<br>" + "<span>Discounted&nbsp;Item!!</span>"
+                    myDiv.classList.add("discount")
                     mySpan.innerHTML="<br> Discounted&nbsp;Item!!"
 
 
                 }
                 if(categProducts[idx].low){
-                    myImg1.className="low"
-                    // myP1.innerHTML= myP1.innerHTML + "<br>" + "<span>Only Few Cakes&nbsp;Left!!</span>"
+                    myDiv.classList.add("low")
                     mySpan.innerHTML="<br> Only Few Cakes&nbsp;Left!!"
                     
 
                 }
                 if(categProducts[idx].out){
-                    myDiv1.className="out"
+                    myDiv.className="out"
 
                 }
                

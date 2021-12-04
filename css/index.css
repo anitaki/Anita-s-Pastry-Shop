@@ -202,7 +202,7 @@ footer {
   flex-wrap: wrap;
   width: 80%;
   margin: auto;
-  padding: 2rem;
+  padding: 2.5rem 1rem;
 
 }
 
@@ -213,6 +213,10 @@ footer {
 
 .product {
   width: 33%;
+}
+
+.product img {
+  padding: 0.9rem;
 }
 
 .logo {
@@ -246,20 +250,23 @@ footer {
 }
 
 
-.discount {
+.discount img {
   background-color: rgba(32, 168, 148, 0.25);
   border-radius: 15% 40%;
 }
 
-.low {
+
+.low img {
   
   background-color: rgba(255,160,137,0.5);
   border-radius:  40% 15%;
 }
 
 .low span {
-  color: indigo;
+  color: indigo
 }
+
+
 
 .out {
 display: none;

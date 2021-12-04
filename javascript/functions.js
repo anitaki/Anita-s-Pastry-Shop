@@ -6,7 +6,7 @@ const categProducts = [
       "https://www.laroccacakes.com/wp-content/uploads/2015/11/chocolate_truffle_cake.png",
     alt: "image of a chocolate truffle cake",
     discount: true,
-    low: false,
+    low: true,
     out: false,
   },
 
@@ -29,7 +29,7 @@ const categProducts = [
     alt: "image of a carrot cake",
     discount: false,
     low: false,
-    out: false,
+    out: true,
   },
 
   {
