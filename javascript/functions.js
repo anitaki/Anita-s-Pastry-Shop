@@ -16,7 +16,7 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2015/11/300256-Jamocha-Almond-Fudge_B_small.png",
     alt: "iimage of an almond fudge cake",
-    discount: false,
+    discount: true,
     low: true,
     out: false,
   },

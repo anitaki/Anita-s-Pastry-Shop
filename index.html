@@ -121,8 +121,8 @@ const changeContent = (() => {
   const spanText = ['<br> Only Few Cakes&nbsp;Left!!', '<br> Discount! Best Price!!'];
   let index = 0;
   return function() {
-    // document.getElementById('mySpan').innerHTML = "";
-    // document.getElementById('myDiv').classList = "";
+    document.getElementById('mySpan').innerHTML = "";
+    document.getElementById('myImg').classList = "";
     document.getElementById('mySpan').innerHTML = spanText[index];
    
     document.getElementById('myImg').classList= classes[index];
@@ -202,6 +202,7 @@ for (let idx in categProducts){
                const myImg=document.createElement("img")
                myImg.src=categProducts[idx].imageURI
                myImg.alt=categProducts[idx].alt
+               myImg.id="myImg"
                myDiv.appendChild(myImg)
                const myP=document.createElement("p")
                myP.innerHTML=categProducts[idx].name
@@ -212,13 +213,13 @@ for (let idx in categProducts){
               
 
                if(categProducts[idx].discount){
-                   myDiv.classList.add("discount")
+                   myImg.classList.add("discount")
                    mySpan.innerHTML="<br> Discount! Best Price!!"
 
 
                }
                if(categProducts[idx].low){
-                   myDiv.classList.add("low")
+                   myImg.classList.add("low")
                    mySpan.innerHTML="<br> Only Few Pastries&nbsp;Left!!"
                    
 
@@ -267,6 +268,7 @@ for (let idx in categProducts){
                const myImg=document.createElement("img")
                myImg.src=categProducts[idx].imageURI
                myImg.alt=categProducts[idx].alt
+               myImg.id="myImg"
                myDiv.appendChild(myImg)
                const myP=document.createElement("p")
                myP.innerHTML=categProducts[idx].name
@@ -277,13 +279,13 @@ for (let idx in categProducts){
               
 
                if(categProducts[idx].discount){
-                   myDiv.classList.add("discount")
+                   myImg.classList.add("discount")
                    mySpan.innerHTML="<br> Discount! Best Price!!"
 
 
                }
                if(categProducts[idx].low){
-                   myDiv.classList.add("low")
+                   myImg.classList.add("low")
                    mySpan.innerHTML="<br> Only Few Cakes&nbsp;Left!!"
                    
 
