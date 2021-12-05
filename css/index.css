@@ -206,7 +206,7 @@ span {
     #ededed 100%
   );
   background-color: #bab1ba;
-  transform: translateY(-5px)
+  transform: translateY(-5px);
 }
 
 /*Main section ------>*/
@@ -256,21 +256,21 @@ span {
   align-items: center;
 }
 
-.discount img {
+.discount {
   background-color: rgba(32, 168, 148, 0.3);
   border-radius: 15% 40%;
 }
 
-.discount span {
+.discount + p > span {
   color: rgb(26, 122, 109);
 }
 
-.low img {
+.low {
   background-color: rgb(224, 83, 101, 0.3);
   border-radius: 40% 15%;
 }
 
-.low span {
+.low + p > span {
   color: rgb(224, 67, 88);
 }
 
@@ -333,19 +333,17 @@ span {
 }
 
 @media (max-width: 425px) {
-
   header nav ul span {
     display: block;
   }
 
   h1 > span {
-    display:block;
+    display: block;
   }
 
   h2 {
     font-size: 1.3rem;
   }
-
 
   .top {
     width: 10vw;

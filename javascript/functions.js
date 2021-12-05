@@ -209,6 +209,18 @@ const categProducts = [
   },
 ];
 
+//   var Interval = setInterval(
+//   function changeClass(){
+//   document.getElementById('myDiv').classList.toggle("low");
+//   document.getElementById('mySpan').innerHTML="<br> Discount! Best Price!!"
+
+//  console.log(mySpan.innerHTML)
+//   },3000
+
+//   )
+
+//   console.log(mySpan.innerHTML)
+
 // function discount(){
 //   const discountedItem = document.getElementsByClassName("discount")
 //   console.log(discountedItem)

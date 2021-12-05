@@ -84,6 +84,7 @@
                 const myImg=document.createElement("img")
                 myImg.src=categProducts[idx].imageURI
                 myImg.alt=categProducts[idx].alt
+                myImg.id="myImg"
                 myDiv.appendChild(myImg)
                 myDiv.id="myDiv"
                 const myP=document.createElement("p")
@@ -96,13 +97,13 @@
                
 
                 if(categProducts[idx].discount){
-                    myDiv.classList.add("discount")
+                    myImg.classList.add("discount")
                     mySpan.innerHTML="<br> Discount! Best Price!!"
 
 
                 }
                 if(categProducts[idx].low){
-                    myDiv.classList.add("low")
+                    myImg.classList.add("low")
                     mySpan.innerHTML="<br> Only Few Cakes&nbsp;Left!!"
                     console.log(mySpan.innerHTML)
                     
@@ -114,33 +115,56 @@
                 }
 
                 if(categProducts[idx].discount && categProducts[idx].low){
-                    
-                
-                
-                    var Interval = setInterval(
-                    function changeClass(){
-                    document.getElementById('myDiv').classList.toggle("low");
-                  document.getElementById('mySpan').innerHTML="<br> Discount! Best Price!!"
-                  
-                   console.log(mySpan.innerHTML)
-                    },3000
-                 
-                    )
-                  
-                 
-                    console.log(mySpan.innerHTML)
-                    
-}
-              
-               
-                    }
-                  
-                }
-                
-              
 
-         
-        </script>
+const changeContent = (() => {
+  const classes = ['low', 'discount'];
+  const spanText = ['<br> Only Few Cakes&nbsp;Left!!', '<br> Discount! Best Price!!'];
+  let index = 0;
+  return function() {
+    // document.getElementById('mySpan').innerHTML = "";
+    // document.getElementById('myDiv').classList = "";
+    document.getElementById('mySpan').innerHTML = spanText[index];
+   
+    document.getElementById('myImg').classList= classes[index];
+    index++;
+    if(index === classes.length) {
+      index = 0;
+    }
+  }
+})();
+
+setInterval(changeContent, 3000);
+
+                }  
+            }         
+        }
+        
+
+
+        
+      //                 const changeContent = (() => {
+//                 const classes = ['low', 'discount'];
+//                 const spanText = ['first text', 'second text'];
+//                 let index = 0;
+//     return function() {
+//     document.getElementById('mySpan').innerHTML = "";
+//     document.getElementById('myDiv').classList = "";
+//     document.getElementById('mySpan').innerHTML = spanText[index];
+//     document.getElementById('myDiv').classList = classes[index];
+//     index++;
+//     if(index === classes.length) {
+//       index = 0;
+//     }
+// })();
+
+// setInterval(changeContent, 3000);
+
+ 
+</script>
+
+                
+                    
+
 
             <!-- <script>
 

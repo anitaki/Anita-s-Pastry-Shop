@@ -1,0 +1,20 @@
+var x=document.getElementById('mySpan').innerHTML
+                    if(x.innerHTML === "<br> Discount! Best Price!!"){
+                        x.innerHTML = "<br> Only Few Cakes&nbsp;Left!!"
+                    }
+                    if (x.innerHTML === "<br> Only Few Cakes&nbsp;Left!!"){
+                        x.innerHTML = "<br> Discount! Best Price!!"
+                    }
+
+                    var Interval = setInterval(
+                    function changeClass(){
+                    document.getElementById('myDiv').classList.toggle("low");
+                  document.getElementById('mySpan').innerHTML="<br> Discount! Best Price!!"
+                  
+                   console.log(mySpan.innerHTML)
+                    },3000
+                 
+                    )
+                  
+                 
+                    console.log(mySpan.innerHTML)
