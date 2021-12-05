@@ -341,4 +341,9 @@ span {
     width: 10vw;
     height: 10vw;
   }
+
+  .logo {
+    width: 20%;
+    height: 20%;
+  }
 }
