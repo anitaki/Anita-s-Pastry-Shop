@@ -27,9 +27,9 @@ const categProducts = [
     imageURI:
       "https://www.laroccacakes.com/wp-content/uploads/2015/11/300188-Carrot_B_small.png",
     alt: "image of a carrot cake",
-    discount: false,
+    discount: true,
     low: false,
-    out: true,
+    out: false,
   },
 
   {
@@ -141,7 +141,7 @@ const categProducts = [
     low: false,
     out: false,
   },
- 
+
   {
     category: "pastries",
     name: "Caramel",
@@ -175,12 +175,6 @@ const categProducts = [
     out: true,
   },
 
-
-
-
-
-
-
   {
     category: "glutenf",
     name: "Gluten free turtle cheesecake",
@@ -212,21 +206,13 @@ const categProducts = [
     discount: false,
     low: false,
     out: false,
-  }
-
-
+  },
 ];
 
-
 // function discount(){
-//   const discountedItem = document.getElementsByClassName("discount")    
+//   const discountedItem = document.getElementsByClassName("discount")
 //   console.log(discountedItem)
 //       for (let i in discountedItem) {
 //       discountedItem[i].children.item(1).innerHTML =  discountedItem[i].children.item(1).innerHTML + "<br> " + "<span>Discounted&nbsp;Item!!</span>";
 //       }
 //   }
-
-
-  
-
-  

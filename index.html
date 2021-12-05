@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://use.typekit.net/ldw4bpc.css">
     <title>Anita's Online Pastry Shop</title>
@@ -33,9 +33,11 @@
                 <li><a href="#pastries">Pastries</a></li>
                 <li><a href="#glutenf">Gluten free</a></li>
 
-                <img class="laddle" src="https://i.pinimg.com/originals/1a/a4/97/1aa497de7f651d9041f2bcd3ddaa23de.jpg"
-                    alt="picture of a pastry laddel">
-                <li><a href="#contact">Contact Us</a></li>
+                <span>
+                    <img class="laddle" src="https://i.pinimg.com/originals/1a/a4/97/1aa497de7f651d9041f2bcd3ddaa23de.jpg"
+                        alt="picture of a pastry laddel">
+                    <li><a href="#contact">Contact Us</a></li>
+                </span>
 
 
             </ul>
@@ -81,6 +83,7 @@
                 myDiv.className="product"
                 const myImg=document.createElement("img")
                 myImg.src=categProducts[idx].imageURI
+                myImg.alt=categProducts[idx].alt
                 myDiv.appendChild(myImg)
                 const myP=document.createElement("p")
                 myP.innerHTML=categProducts[idx].name
@@ -151,6 +154,7 @@ for (let idx in categProducts){
                myDiv.className="product"
                const myImg=document.createElement("img")
                myImg.src=categProducts[idx].imageURI
+               myImg.alt=categProducts[idx].alt
                myDiv.appendChild(myImg)
                const myP=document.createElement("p")
                myP.innerHTML=categProducts[idx].name
@@ -215,6 +219,7 @@ for (let idx in categProducts){
                myDiv.className="product"
                const myImg=document.createElement("img")
                myImg.src=categProducts[idx].imageURI
+               myImg.alt=categProducts[idx].alt
                myDiv.appendChild(myImg)
                const myP=document.createElement("p")
                myP.innerHTML=categProducts[idx].name
@@ -284,7 +289,7 @@ for (let idx in categProducts){
                 alt="image of arrow up"></a>
                 <br>
                 <p class="credits">This is a demo site for learning purposes</p>
-                <p class="credits">Images from:&nbsp;&nbsp;https://www.laroccacakes.com&nbsp; & &nbsp; https://www.papanaretos.gr &nbsp; & &nbsp; https://media.mallorca-touristguide.com &nbsp; & &nbsp; https://twitter.com/AnitaBakery</p>
+                <p class="credits">Images from:&nbsp;&nbsp;https://www.laroccacakes.com&nbsp; & &nbsp; https://www.papanaretos.gr &nbsp; & &nbsp; https://media.mallorca-touristguide.com &nbsp; & &nbsp; https://media.mallorca-touristguide.com</p>
     </footer>
 
   
