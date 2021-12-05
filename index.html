@@ -85,6 +85,7 @@
                 myImg.src=categProducts[idx].imageURI
                 myImg.alt=categProducts[idx].alt
                 myDiv.appendChild(myImg)
+                myDiv.id="myDiv"
                 const myP=document.createElement("p")
                 myP.innerHTML=categProducts[idx].name
                 myDiv.appendChild(myP)
@@ -109,6 +110,19 @@
                     myDiv.className="out"
 
                 }
+
+                if(categProducts[idx].discount && categProducts[idx].low){
+                    
+                    setInterval(
+                    function changeClass(){
+                    document.getElementById('myDiv').classList.toggle("low");
+                    },3000
+                    )
+}
+                 console.log(myDiv.classList)
+                    
+
+                
                
                     }
                   
