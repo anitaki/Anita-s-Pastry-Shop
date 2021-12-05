@@ -91,6 +91,7 @@
                 myDiv.appendChild(myP)
                 mySpan=document.createElement("span")
                 myP.appendChild(mySpan)
+                mySpan.id="mySpan"
               
                
 
@@ -103,6 +104,7 @@
                 if(categProducts[idx].low){
                     myDiv.classList.add("low")
                     mySpan.innerHTML="<br> Only Few Cakes&nbsp;Left!!"
+                    console.log(mySpan.innerHTML)
                     
 
                 }
@@ -113,16 +115,23 @@
 
                 if(categProducts[idx].discount && categProducts[idx].low){
                     
-                    setInterval(
+                
+                
+                    var Interval = setInterval(
                     function changeClass(){
                     document.getElementById('myDiv').classList.toggle("low");
+                  document.getElementById('mySpan').innerHTML="<br> Discount! Best Price!!"
+                  
+                   console.log(mySpan.innerHTML)
                     },3000
+                 
                     )
-}
-                 console.log(myDiv.classList)
+                  
+                 
+                    console.log(mySpan.innerHTML)
                     
-
-                
+}
+              
                
                     }
                   
