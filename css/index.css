@@ -333,9 +333,19 @@ span {
 }
 
 @media (max-width: 425px) {
+
   header nav ul span {
     display: block;
   }
+
+  h1 > span {
+    display:block;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
 
   .top {
     width: 10vw;
