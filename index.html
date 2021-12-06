@@ -84,7 +84,7 @@
                 const myImg=document.createElement("img")
                 myImg.src=categProducts[idx].imageURI
                 myImg.alt=categProducts[idx].alt
-                myImg.id="myImg"
+                myImg.id=`myImg${idx}`
                 myDiv.appendChild(myImg)
                 myDiv.id="myDiv"
                 const myP=document.createElement("p")
@@ -92,7 +92,7 @@
                 myDiv.appendChild(myP)
                 mySpan=document.createElement("span")
                 myP.appendChild(mySpan)
-                mySpan.id="mySpan"
+                mySpan.id = `mySpan${idx}`
               
                
 
@@ -121,11 +121,11 @@ const changeContent = (() => {
   const spanText = ['<br> Only Few Cakes&nbsp;Left!!', '<br> Discount! Best Price!!'];
   let index = 0;
   return function() {
-    document.getElementById('mySpan').innerHTML = "";
-    document.getElementById('myImg').classList = "";
-    document.getElementById('mySpan').innerHTML = spanText[index];
+    document.getElementById(`mySpan${idx}`).innerHTML = "";
+    document.getElementById(`myImg${idx}`).classList = "";
+    document.getElementById(`mySpan${idx}`).innerHTML = spanText[index];
    
-    document.getElementById('myImg').classList= classes[index];
+    document.getElementById(`myImg${idx}`).classList= classes[index];
     index++;
     if(index === classes.length) {
       index = 0;
