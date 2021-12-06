@@ -229,6 +229,28 @@ for (let idx in categProducts){
                 pastryDiv.className="out"
 
                }
+
+               if(categProducts[idx].discount && categProducts[idx].low){
+
+const changeContent = (() => {
+const classes = ['low', 'discount'];
+const spanText = ['<br> Only Few Pastries&nbsp;Left!!', '<br> Discount! Best Price!!'];
+  let index = 0;
+  return function() {
+    document.getElementById(`pastrySpan${idx}`).innerHTML = "";
+    document.getElementById(`pastryImg${idx}`).classList = "";
+    document.getElementById(`pastrySpan${idx}`).innerHTML = spanText[index];
+    document.getElementById(`pastryImg${idx}`).classList= classes[index];
+    index++;
+    if(index === classes.length) {
+      index = 0;
+    }
+  }
+})();
+
+setInterval(changeContent, 3000);
+
+                }  
                    }
                }
 
@@ -297,6 +319,28 @@ for (let idx in categProducts){
                 glutenfDiv.className="out"
 
                }
+
+               if(categProducts[idx].discount && categProducts[idx].low){
+
+const changeContent = (() => {
+const classes = ['low', 'discount'];
+const spanText = ['<br> Only Few Cakes&nbsp;Left!!', '<br> Discount! Best Price!!'];
+  let index = 0;
+  return function() {
+    document.getElementById(`glutenfSpan${idx}`).innerHTML = "";
+    document.getElementById(`glutenfImg${idx}`).classList = "";
+    document.getElementById(`glutenfSpan${idx}`).innerHTML = spanText[index];
+    document.getElementById(`glutenfImg${idx}`).classList= classes[index];
+    index++;
+    if(index === classes.length) {
+      index = 0;
+    }
+  }
+})();
+
+setInterval(changeContent, 3000);
+
+                }  
               
                    }
                  

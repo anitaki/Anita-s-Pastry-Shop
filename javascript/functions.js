@@ -182,7 +182,7 @@ const categProducts = [
       "https://images.squarespace-cdn.com/content/v1/538500e4e4b0fa9e95efc7b9/1474392514481-YP6YDWSILDGN2OL8VUDD/adj_GF_TurtleCC.png?format=500w",
     alt: "image of a gluten free turtle cheesecake",
     discount: true,
-    low: false,
+    low: true,
     out: false,
   },
 
@@ -209,22 +209,4 @@ const categProducts = [
   },
 ];
 
-//   var Interval = setInterval(
-//   function changeClass(){
-//   document.getElementById('myDiv').classList.toggle("low");
-//   document.getElementById('mySpan').innerHTML="<br> Discount! Best Price!!"
 
-//  console.log(mySpan.innerHTML)
-//   },3000
-
-//   )
-
-//   console.log(mySpan.innerHTML)
-
-// function discount(){
-//   const discountedItem = document.getElementsByClassName("discount")
-//   console.log(discountedItem)
-//       for (let i in discountedItem) {
-//       discountedItem[i].children.item(1).innerHTML =  discountedItem[i].children.item(1).innerHTML + "<br> " + "<span>Discounted&nbsp;Item!!</span>";
-//       }
-//   }
