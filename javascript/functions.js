@@ -209,4 +209,203 @@ const categProducts = [
   },
 ];
 
+function createCakes() {
+  for (let idx in categProducts) {
+    if (categProducts[idx].category === "cakes") {
+      const parentElement = document.getElementById("divCakes");
+      const cakeDiv = document.createElement("div");
+      parentElement.appendChild(cakeDiv);
+      cakeDiv.className = "product";
+      cakeDiv.id = `cakeDiv${idx}`;
+      const cakeImg = document.createElement("img");
+      cakeImg.src = categProducts[idx].imageURI;
+      cakeImg.alt = categProducts[idx].alt;
+      cakeImg.id = `cakeImg${idx}`;
+      cakeDiv.appendChild(cakeImg);
+      const cakeP = document.createElement("p");
+      cakeP.innerHTML = categProducts[idx].name;
+      cakeDiv.appendChild(cakeP);
+      cakeSpan = document.createElement("span");
+      cakeP.appendChild(cakeSpan);
+      cakeSpan.id = `cakeSpan${idx}`;
 
+      if (categProducts[idx].discount) {
+        cakeImg.classList.add("discount");
+        cakeSpan.innerHTML = "<br> Discount! Best Price!!";
+      }
+      if (categProducts[idx].low) {
+        cakeImg.classList.add("low");
+        cakeSpan.innerHTML = "<br> Only Few Cakes&nbsp;Left!!";
+        console.log(cakeSpan.innerHTML);
+      }
+      if (categProducts[idx].out) {
+        cakeDiv.className = "out";
+      }
+
+      if (categProducts[idx].discount && categProducts[idx].low) {
+        const changeContent = (() => {
+          const classes = ["low", "discount"];
+          const spanText = [
+            "<br> Only Few Cakes&nbsp;Left!!",
+            "<br> Discount! Best Price!!",
+          ];
+          let index = 0;
+          return function () {
+            document.getElementById(`cakeSpan${idx}`).innerHTML = "";
+            document.getElementById(`cakeImg${idx}`).classList = "";
+            document.getElementById(`cakeSpan${idx}`).innerHTML =
+              spanText[index];
+            document.getElementById(`cakeImg${idx}`).classList = classes[index];
+            index++;
+            if (index === classes.length) {
+              index = 0;
+            }
+          };
+        })();
+
+        setInterval(changeContent, 3000);
+      }
+    }
+  }
+}
+
+function createPastries() {
+  for (let idx in categProducts) {
+    if (categProducts[idx].category === "pastries") {
+      const parentElement = document.getElementById("divPastries");
+      const pastryDiv = document.createElement("div");
+      parentElement.appendChild(pastryDiv);
+      pastryDiv.className = "product";
+      pastryDiv.id = `pastryDiv${idx}`;
+      const pastryImg = document.createElement("img");
+      pastryImg.src = categProducts[idx].imageURI;
+      pastryImg.alt = categProducts[idx].alt;
+      pastryImg.id = `pastryImg${idx}`;
+      pastryDiv.appendChild(pastryImg);
+      const pastryP = document.createElement("p");
+      pastryP.innerHTML = categProducts[idx].name;
+      pastryDiv.appendChild(pastryP);
+      pastrySpan = document.createElement("span");
+      pastryP.appendChild(pastrySpan);
+      pastrySpan.id = `pastrySpan${idx}`;
+
+      if (categProducts[idx].discount) {
+        pastryImg.classList.add("discount");
+        pastrySpan.innerHTML = "<br> Discount! Best Price!!";
+      }
+      if (categProducts[idx].low) {
+        pastryImg.classList.add("low");
+        pastrySpan.innerHTML = "<br> Only Few Pastries&nbsp;Left!!";
+      }
+      if (categProducts[idx].out) {
+        pastryDiv.className = "out";
+      }
+
+      if (categProducts[idx].discount && categProducts[idx].low) {
+        const changeContent = (() => {
+          const classes = ["low", "discount"];
+          const spanText = [
+            "<br> Only Few Pastries&nbsp;Left!!",
+            "<br> Discount! Best Price!!",
+          ];
+          let index = 0;
+          return function () {
+            document.getElementById(`pastrySpan${idx}`).innerHTML = "";
+            document.getElementById(`pastryImg${idx}`).classList = "";
+            document.getElementById(`pastrySpan${idx}`).innerHTML =
+              spanText[index];
+            document.getElementById(`pastryImg${idx}`).classList =
+              classes[index];
+            index++;
+            if (index === classes.length) {
+              index = 0;
+            }
+          };
+        })();
+
+        setInterval(changeContent, 3000);
+      }
+    }
+  }
+}
+
+function createGlutenF() {
+  for (let idx in categProducts) {
+    if (categProducts[idx].category === "glutenf") {
+      const parentElement = document.getElementById("divGlutenf");
+      const glutenfDiv = document.createElement("div");
+      parentElement.appendChild(glutenfDiv);
+      glutenfDiv.className = "product";
+      glutenfDiv.id = `glutenfDiv${idx}`;
+      const glutenfImg = document.createElement("img");
+      glutenfImg.src = categProducts[idx].imageURI;
+      glutenfImg.alt = categProducts[idx].alt;
+      glutenfImg.id = `glutenfImg${idx}`;
+      glutenfDiv.appendChild(glutenfImg);
+      const glutenfP = document.createElement("p");
+      glutenfP.innerHTML = categProducts[idx].name;
+      glutenfDiv.appendChild(glutenfP);
+      glutenfSpan = document.createElement("span");
+      glutenfP.appendChild(glutenfSpan);
+      glutenfSpan.id = `glutenfSpan${idx}`;
+
+      if (categProducts[idx].discount) {
+        glutenfImg.classList.add("discount");
+        glutenfSpan.innerHTML = "<br> Discount! Best Price!!";
+      }
+      if (categProducts[idx].low) {
+        glutenfImg.classList.add("low");
+        glutenfSpan.innerHTML = "<br> Only Few Cakes&nbsp;Left!!";
+      }
+      if (categProducts[idx].out) {
+        glutenfDiv.className = "out";
+      }
+
+      if (categProducts[idx].discount && categProducts[idx].low) {
+        const changeContent = (() => {
+          const classes = ["low", "discount"];
+          const spanText = [
+            "<br> Only Few Cakes&nbsp;Left!!",
+            "<br> Discount! Best Price!!",
+          ];
+          let index = 0;
+          return function () {
+            document.getElementById(`glutenfSpan${idx}`).innerHTML = "";
+            document.getElementById(`glutenfImg${idx}`).classList = "";
+            document.getElementById(`glutenfSpan${idx}`).innerHTML =
+              spanText[index];
+            document.getElementById(`glutenfImg${idx}`).classList =
+              classes[index];
+            index++;
+            if (index === classes.length) {
+              index = 0;
+            }
+          };
+        })();
+
+        setInterval(changeContent, 3000);
+      }
+    }
+  }
+}
+
+// function sortByDiscount(){
+//   console.log("Sorting by Discount")
+//   categProducts.sort(function comparator(a,b){
+//     return (a.discount===b.discount) ? 0 : (a.discount>b.discount) ? 1 : -1
+//   })
+// }
+
+// for (let idx in categProducts){
+//     let x=`${categProducts[idx].category}`
+
+//     if (x=="glutenf"){
+
+//   document.write(`<div class="product ${categProducts[idx].class}">
+//   <img src="${categProducts[idx].imageURI}">
+//  <p>${categProducts[idx].name}</p>
+
+//   </div>`)
+// }
+
+// }
