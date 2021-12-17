@@ -211,7 +211,7 @@ const categProducts = [
 
 function createCakes() {
   const parentElement = document.getElementById("divCakes");
-parentElement.innerHTML=""
+  parentElement.innerHTML = "";
   for (let idx in categProducts) {
     if (categProducts[idx].category === "cakes") {
       const cakeDiv = document.createElement("div");
@@ -271,10 +271,9 @@ parentElement.innerHTML=""
 
 function createPastries() {
   const parentElement = document.getElementById("divPastries");
-  parentElement.innerHTML=""
+  parentElement.innerHTML = "";
   for (let idx in categProducts) {
     if (categProducts[idx].category === "pastries") {
-      
       const pastryDiv = document.createElement("div");
       parentElement.appendChild(pastryDiv);
       pastryDiv.className = "product";
@@ -333,7 +332,7 @@ function createPastries() {
 
 function createGlutenF() {
   const parentElement = document.getElementById("divGlutenf");
-  parentElement.innerHTML=""
+  parentElement.innerHTML = "";
   for (let idx in categProducts) {
     if (categProducts[idx].category === "glutenf") {
       // const parentElement = document.getElementById("divGlutenf");
@@ -393,31 +392,28 @@ function createGlutenF() {
   }
 }
 
-
-
-function sortByDiscount(){
+function sortByDiscount() {
   // console.log(categProducts)
   // console.log(categProducts.sort())
   // console.log(categProducts.reverse())
 
-  categProducts.sort(function comparator(a,b){
-    return (a.discount===b.discount) ? 0 : (a.discount>b.discount) ? -1 : 1
-  })
-  createCakes()
-  createPastries()
-  createGlutenF()
-
+  categProducts.sort(function comparator(a, b) {
+    return a.discount === b.discount ? 0 : a.discount > b.discount ? -1 : 1;
+  });
+  createCakes();
+  createPastries();
+  createGlutenF();
 }
 
 let sortByAvailability = () => {
-  categProducts.sort(function comparator(a,b){
-    return (a.low===b.low) ? 0 : (a.low >b.low) ? 1 : -1
-  })
-console.log(categProducts.sort())
-createCakes()
-  createPastries()
-  createGlutenF()
-}
+  categProducts.sort(function comparator(a, b) {
+    return a.low === b.low ? 0 : a.low > b.low ? 1 : -1;
+  });
+  console.log(categProducts.sort());
+  createCakes();
+  createPastries();
+  createGlutenF();
+};
 
 // for (let idx in categProducts){
 //     let x=`${categProducts[idx].category}`
