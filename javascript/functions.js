@@ -138,7 +138,7 @@ const categProducts = [
       "https://www.papanaretos.gr/wp-content/uploads/2014/04/2.Pasta_BLACK-FOREST.png",
     alt: "image of a black forest pastry",
     discount: false,
-    low: false,
+    low: true,
     out: false,
   },
 
@@ -172,7 +172,7 @@ const categProducts = [
     alt: "image of a profiterol pastry",
     discount: false,
     low: false,
-    out: true,
+    out: false,
   },
 
   {
@@ -203,16 +203,17 @@ const categProducts = [
     imageURI:
       "https://www.chriskitchen.com.au/wp-content/uploads/2020/08/homepage-header-cake.png",
     alt: "image of a gluten free caramel cake",
-    discount: false,
+    discount: true,
     low: false,
     out: false,
   },
 ];
 
 function createCakes() {
+  const parentElement = document.getElementById("divCakes");
+parentElement.innerHTML=""
   for (let idx in categProducts) {
     if (categProducts[idx].category === "cakes") {
-      const parentElement = document.getElementById("divCakes");
       const cakeDiv = document.createElement("div");
       parentElement.appendChild(cakeDiv);
       cakeDiv.className = "product";
@@ -236,7 +237,6 @@ function createCakes() {
       if (categProducts[idx].low) {
         cakeImg.classList.add("low");
         cakeSpan.innerHTML = "<br> Only Few Cakes&nbsp;Left!!";
-        console.log(cakeSpan.innerHTML);
       }
       if (categProducts[idx].out) {
         cakeDiv.className = "out";
@@ -263,16 +263,18 @@ function createCakes() {
           };
         })();
 
-        setInterval(changeContent, 3000);
+        setInterval(changeContent, 2000);
       }
     }
   }
 }
 
 function createPastries() {
+  const parentElement = document.getElementById("divPastries");
+  parentElement.innerHTML=""
   for (let idx in categProducts) {
     if (categProducts[idx].category === "pastries") {
-      const parentElement = document.getElementById("divPastries");
+      
       const pastryDiv = document.createElement("div");
       parentElement.appendChild(pastryDiv);
       pastryDiv.className = "product";
@@ -323,16 +325,18 @@ function createPastries() {
           };
         })();
 
-        setInterval(changeContent, 3000);
+        setInterval(changeContent, 2000);
       }
     }
   }
 }
 
 function createGlutenF() {
+  const parentElement = document.getElementById("divGlutenf");
+  parentElement.innerHTML=""
   for (let idx in categProducts) {
     if (categProducts[idx].category === "glutenf") {
-      const parentElement = document.getElementById("divGlutenf");
+      // const parentElement = document.getElementById("divGlutenf");
       const glutenfDiv = document.createElement("div");
       parentElement.appendChild(glutenfDiv);
       glutenfDiv.className = "product";
@@ -383,18 +387,37 @@ function createGlutenF() {
           };
         })();
 
-        setInterval(changeContent, 3000);
+        setInterval(changeContent, 2000);
       }
     }
   }
 }
 
-// function sortByDiscount(){
-//   console.log("Sorting by Discount")
-//   categProducts.sort(function comparator(a,b){
-//     return (a.discount===b.discount) ? 0 : (a.discount>b.discount) ? 1 : -1
-//   })
-// }
+
+
+function sortByDiscount(){
+  // console.log(categProducts)
+  // console.log(categProducts.sort())
+  // console.log(categProducts.reverse())
+
+  categProducts.sort(function comparator(a,b){
+    return (a.discount===b.discount) ? 0 : (a.discount>b.discount) ? -1 : 1
+  })
+  createCakes()
+  createPastries()
+  createGlutenF()
+
+}
+
+let sortByAvailability = () => {
+  categProducts.sort(function comparator(a,b){
+    return (a.low===b.low) ? 0 : (a.low >b.low) ? 1 : -1
+  })
+console.log(categProducts.sort())
+createCakes()
+  createPastries()
+  createGlutenF()
+}
 
 // for (let idx in categProducts){
 //     let x=`${categProducts[idx].category}`

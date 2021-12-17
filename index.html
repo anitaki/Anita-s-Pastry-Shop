@@ -52,10 +52,7 @@
             <h4>View our menu and order some tasty treats today!</h5>
                 
                 <button type="button" class="myButton"><a href="#cakes">Order online </a></button>
-                
-
-
-
+ 
                 <img src="https://hersheyschocolateworldlasvegas.com/wp-content/uploads/2015/04/image0011.jpg" alt="image of cupcakes">
 
          
@@ -68,98 +65,11 @@
     <main class="container">
 
         <h3 id="cakes">Round Cakes</h3>
-
  
         <div class="category cakes" id="divCakes">
             <script>
-
-                for (let idx in categProducts){
-                   
-                    if (categProducts[idx].category==="cakes") {
-                
-                const parentElement=document.getElementById("divCakes")
-                const cakeDiv=document.createElement("div")               
-                parentElement.appendChild(cakeDiv)
-                cakeDiv.className="product"
-                cakeDiv.id = `cakeDiv${idx}`
-                const cakeImg=document.createElement("img")
-                cakeImg.src=categProducts[idx].imageURI
-                cakeImg.alt=categProducts[idx].alt
-                cakeImg.id=`cakeImg${idx}`
-                cakeDiv.appendChild(cakeImg)
-                const cakeP=document.createElement("p")
-                cakeP.innerHTML=categProducts[idx].name
-                cakeDiv.appendChild(cakeP)
-                cakeSpan=document.createElement("span")
-                cakeP.appendChild(cakeSpan)
-                cakeSpan.id = `cakeSpan${idx}`
-              
-               
-
-                if(categProducts[idx].discount){
-                    cakeImg.classList.add("discount")
-                    cakeSpan.innerHTML="<br> Discount! Best Price!!"
-
-
-                }
-                if(categProducts[idx].low){
-                    cakeImg.classList.add("low")
-                    cakeSpan.innerHTML="<br> Only Few Cakes&nbsp;Left!!"
-                    console.log(cakeSpan.innerHTML)
-                    
-
-                }
-                if(categProducts[idx].out){
-                    cakeDiv.className="out"
-
-                }
-
-                if(categProducts[idx].discount && categProducts[idx].low){
-
-const changeContent = (() => {
-const classes = ['low', 'discount'];
-const spanText = ['<br> Only Few Cakes&nbsp;Left!!', '<br> Discount! Best Price!!'];
-  let index = 0;
-  return function() {
-    document.getElementById(`cakeSpan${idx}`).innerHTML = "";
-    document.getElementById(`cakeImg${idx}`).classList = "";
-    document.getElementById(`cakeSpan${idx}`).innerHTML = spanText[index];
-    document.getElementById(`cakeImg${idx}`).classList= classes[index];
-    index++;
-    if(index === classes.length) {
-      index = 0;
-    }
-  }
-})();
-
-setInterval(changeContent, 3000);
-
-                }  
-            }         
-        }
-        
-
-
-        
-      //                 const changeContent = (() => {
-//                 const classes = ['low', 'discount'];
-//                 const spanText = ['first text', 'second text'];
-//                 let index = 0;
-//     return function() {
-//     document.getElementById('mySpan').innerHTML = "";
-//     document.getElementById('myDiv').classList = "";
-//     document.getElementById('mySpan').innerHTML = spanText[index];
-//     document.getElementById('myDiv').classList = classes[index];
-//     index++;
-//     if(index === classes.length) {
-//       index = 0;
-//     }
-// })();
-
-// setInterval(changeContent, 3000);
-
- 
-</script>
+            createCakes()
+            </script>
                  
         </div>
            
@@ -169,170 +79,22 @@ setInterval(changeContent, 3000);
         <div class="category pastries" id="divPastries">
 
             <script>
+            createPastries()
+            </script>
 
-for (let idx in categProducts){
-                   
-                   if (categProducts[idx].category==="pastries") {
-               
-               const parentElement=document.getElementById("divPastries")
-               const pastryDiv=document.createElement("div")               
-               parentElement.appendChild(pastryDiv)
-               pastryDiv.className="product"
-               pastryDiv.id = `pastryDiv${idx}`
-               const pastryImg=document.createElement("img")
-               pastryImg.src=categProducts[idx].imageURI
-               pastryImg.alt=categProducts[idx].alt
-               pastryImg.id=`pastryImg${idx}`
-               pastryDiv.appendChild(pastryImg)
-               const pastryP=document.createElement("p")
-               pastryP.innerHTML=categProducts[idx].name
-               pastryDiv.appendChild(pastryP)
-               pastrySpan=document.createElement("span")
-               pastryP.appendChild(pastrySpan)
-               pastrySpan.id = `pastrySpan${idx}`
-             
-              
-
-               if(categProducts[idx].discount){
-                pastryImg.classList.add("discount")
-                pastrySpan.innerHTML="<br> Discount! Best Price!!"
-
-
-               }
-               if(categProducts[idx].low){
-                pastryImg.classList.add("low")
-                pastrySpan.innerHTML="<br> Only Few Pastries&nbsp;Left!!"
-                   
-
-               }
-               if(categProducts[idx].out){
-                pastryDiv.className="out"
-
-               }
-
-               if(categProducts[idx].discount && categProducts[idx].low){
-
-const changeContent = (() => {
-const classes = ['low', 'discount'];
-const spanText = ['<br> Only Few Pastries&nbsp;Left!!', '<br> Discount! Best Price!!'];
-  let index = 0;
-  return function() {
-    document.getElementById(`pastrySpan${idx}`).innerHTML = "";
-    document.getElementById(`pastryImg${idx}`).classList = "";
-    document.getElementById(`pastrySpan${idx}`).innerHTML = spanText[index];
-    document.getElementById(`pastryImg${idx}`).classList= classes[index];
-    index++;
-    if(index === classes.length) {
-      index = 0;
-    }
-  }
-})();
-
-setInterval(changeContent, 3000);
-
-                }  
-                   }
-               }
-                
-                
-                </script>
-
-
-           
         </div>
 
         <h3 id="glutenf">Sugar and Gluten free</h3>
         <div class="category glutenf" id="divGlutenf">
 
-<script>
+            <script>
+            createGlutenF()
 
-for (let idx in categProducts){
-                   
-                   if (categProducts[idx].category==="glutenf") {
-               
-               const parentElement=document.getElementById("divGlutenf")
-               const glutenfDiv=document.createElement("div")               
-               parentElement.appendChild(glutenfDiv)
-               glutenfDiv.className="product"
-               glutenfDiv.id = `glutenfDiv${idx}`
-               const glutenfImg=document.createElement("img")
-               glutenfImg.src=categProducts[idx].imageURI
-               glutenfImg.alt=categProducts[idx].alt
-               glutenfImg.id=`glutenfImg${idx}`
-               glutenfDiv.appendChild(glutenfImg)
-               const glutenfP=document.createElement("p")
-               glutenfP.innerHTML=categProducts[idx].name
-               glutenfDiv.appendChild(glutenfP)
-               glutenfSpan=document.createElement("span")
-               glutenfP.appendChild(glutenfSpan)
-               glutenfSpan.id = `glutenfSpan${idx}`
-             
-              
-
-               if(categProducts[idx].discount){
-                glutenfImg.classList.add("discount")
-                glutenfSpan.innerHTML="<br> Discount! Best Price!!"
-
-
-               }
-               if(categProducts[idx].low){
-                glutenfImg.classList.add("low")
-                glutenfSpan.innerHTML="<br> Only Few Cakes&nbsp;Left!!"
-                   
-
-               }
-               if(categProducts[idx].out){
-                glutenfDiv.className="out"
-
-               }
-
-               if(categProducts[idx].discount && categProducts[idx].low){
-
-const changeContent = (() => {
-const classes = ['low', 'discount'];
-const spanText = ['<br> Only Few Cakes&nbsp;Left!!', '<br> Discount! Best Price!!'];
-  let index = 0;
-  return function() {
-    document.getElementById(`glutenfSpan${idx}`).innerHTML = "";
-    document.getElementById(`glutenfImg${idx}`).classList = "";
-    document.getElementById(`glutenfSpan${idx}`).innerHTML = spanText[index];
-    document.getElementById(`glutenfImg${idx}`).classList= classes[index];
-    index++;
-    if(index === classes.length) {
-      index = 0;
-    }
-  }
-})();
-
-setInterval(changeContent, 3000);
-
-                }  
-              
-                   }
-                 
-               }
-               
-
-
-// for (let idx in categProducts){
-//     let x=`${categProducts[idx].category}`
- 
-//     if (x=="glutenf"){
-  
-//   document.write(`<div class="product ${categProducts[idx].class}">
-//   <img src="${categProducts[idx].imageURI}">
-//  <p>${categProducts[idx].name}</p>
-
-//   </div>`)
-// }  
-       
-// }
-
-
-</script>
-            
-
+            </script> 
     </main>
+
+    <button class="button-discount-first" onclick="sortByDiscount()">Sort by Discount</button>
+    <button class="button-availability-first"onclick="sortByAvailability()">Sort by Availability </button>
 
     <footer>
         <h2 id="contact">Contact Us</h2>
@@ -351,7 +113,7 @@ setInterval(changeContent, 3000);
                 alt="image of arrow up"></a>
                 <br>
                 <p class="credits">This is a demo site for learning purposes</p>
-                <p class="credits">Images from:&nbsp;&nbsp;https://www.laroccacakes.com&nbsp; & &nbsp; https://www.papanaretos.gr &nbsp; & &nbsp; https://media.mallorca-touristguide.com &nbsp; & &nbsp; https://media.mallorca-touristguide.com</p>
+                <p class="credits">Images from:&nbsp;&nbsp;https://www.laroccacakes.com&nbsp; & &nbsp; https://www.papanaretos.gr &nbsp; & &nbsp; https://media.mallorca-touristguide.com</p>
     </footer>
 
   
