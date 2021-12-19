@@ -243,27 +243,36 @@ function createCakes() {
       }
 
       if (categProducts[idx].discount && categProducts[idx].low) {
-        const changeContent = (() => {
-          const classes = ["low", "discount"];
-          const spanText = [
-            "<br> Only Few Cakes&nbsp;Left!!",
-            "<br> Discount! Best Price!!",
-          ];
-          let index = 0;
-          return function () {
-            document.getElementById(`cakeSpan${idx}`).innerHTML = "";
-            document.getElementById(`cakeImg${idx}`).classList = "";
-            document.getElementById(`cakeSpan${idx}`).innerHTML =
-              spanText[index];
-            document.getElementById(`cakeImg${idx}`).classList = classes[index];
-            index++;
-            if (index === classes.length) {
-              index = 0;
-            }
-          };
-        })();
+        cakeImg.classList.remove("low");
+        cakeImg.classList.add("discount");
+        cakeSpan.innerHTML = "<br> Discount! Best Price!!";
+        cakeSpan2 = document.createElement("span");
+        cakeP.appendChild(cakeSpan2);
+        cakeSpan2.innerHTML = "<br> Only Few Cakes&nbsp;Left!!";
+        cakeSpan2.style.color = "rgb(224, 67, 88)";
+       
 
-        setInterval(changeContent, 2000);
+        // const changeContent = (() => {
+        //   const classes = ["low", "discount"];
+        //   const spanText = [
+        //     "<br> Only Few Cakes&nbsp;Left!!",
+        //     "<br> Discount! Best Price!!",
+        //   ];
+        //   let index = 0;
+        //   return function () {
+        //     document.getElementById(`cakeSpan${idx}`).innerHTML = "";
+        //     document.getElementById(`cakeImg${idx}`).classList = "";
+        //     document.getElementById(`cakeSpan${idx}`).innerHTML =
+        //       spanText[index];
+        //     document.getElementById(`cakeImg${idx}`).classList = classes[index];
+        //     index++;
+        //     if (index === classes.length) {
+        //       index = 0;
+        //     }
+        //   };
+        // })();
+
+        // setInterval(changeContent, 2000);
       }
     }
   }
@@ -302,30 +311,30 @@ function createPastries() {
         pastryDiv.className = "out";
       }
 
-      if (categProducts[idx].discount && categProducts[idx].low) {
-        const changeContent = (() => {
-          const classes = ["low", "discount"];
-          const spanText = [
-            "<br> Only Few Pastries&nbsp;Left!!",
-            "<br> Discount! Best Price!!",
-          ];
-          let index = 0;
-          return function () {
-            document.getElementById(`pastrySpan${idx}`).innerHTML = "";
-            document.getElementById(`pastryImg${idx}`).classList = "";
-            document.getElementById(`pastrySpan${idx}`).innerHTML =
-              spanText[index];
-            document.getElementById(`pastryImg${idx}`).classList =
-              classes[index];
-            index++;
-            if (index === classes.length) {
-              index = 0;
-            }
-          };
-        })();
+      // if (categProducts[idx].discount && categProducts[idx].low) {
+      //   const changeContent = (() => {
+      //     const classes = ["low", "discount"];
+      //     const spanText = [
+      //       "<br> Only Few Pastries&nbsp;Left!!",
+      //       "<br> Discount! Best Price!!",
+      //     ];
+      //     let index = 0;
+      //     return function () {
+      //       document.getElementById(`pastrySpan${idx}`).innerHTML = "";
+      //       document.getElementById(`pastryImg${idx}`).classList = "";
+      //       document.getElementById(`pastrySpan${idx}`).innerHTML =
+      //         spanText[index];
+      //       document.getElementById(`pastryImg${idx}`).classList =
+      //         classes[index];
+      //       index++;
+      //       if (index === classes.length) {
+      //         index = 0;
+      //       }
+      //     };
+      //   })();
 
-        setInterval(changeContent, 2000);
-      }
+      //   setInterval(changeContent, 2000);
+      // }
     }
   }
 }
@@ -364,30 +373,30 @@ function createGlutenF() {
         glutenfDiv.className = "out";
       }
 
-      if (categProducts[idx].discount && categProducts[idx].low) {
-        const changeContent = (() => {
-          const classes = ["low", "discount"];
-          const spanText = [
-            "<br> Only Few Cakes&nbsp;Left!!",
-            "<br> Discount! Best Price!!",
-          ];
-          let index = 0;
-          return function () {
-            document.getElementById(`glutenfSpan${idx}`).innerHTML = "";
-            document.getElementById(`glutenfImg${idx}`).classList = "";
-            document.getElementById(`glutenfSpan${idx}`).innerHTML =
-              spanText[index];
-            document.getElementById(`glutenfImg${idx}`).classList =
-              classes[index];
-            index++;
-            if (index === classes.length) {
-              index = 0;
-            }
-          };
-        })();
+      // if (categProducts[idx].discount && categProducts[idx].low) {
+      //   const changeContent = (() => {
+      //     const classes = ["low", "discount"];
+      //     const spanText = [
+      //       "<br> Only Few Cakes&nbsp;Left!!",
+      //       "<br> Discount! Best Price!!",
+      //     ];
+      //     let index = 0;
+      //     return function () {
+      //       document.getElementById(`glutenfSpan${idx}`).innerHTML = "";
+      //       document.getElementById(`glutenfImg${idx}`).classList = "";
+      //       document.getElementById(`glutenfSpan${idx}`).innerHTML =
+      //         spanText[index];
+      //       document.getElementById(`glutenfImg${idx}`).classList =
+      //         classes[index];
+      //       index++;
+      //       if (index === classes.length) {
+      //         index = 0;
+      //       }
+      //     };
+      //   })();
 
-        setInterval(changeContent, 2000);
-      }
+      //   setInterval(changeContent, 2000);
+      // }
     }
   }
 }
@@ -398,8 +407,11 @@ function sortByDiscount() {
   // console.log(categProducts.reverse())
 
   categProducts.sort(function comparator(a, b) {
-    return a.discount === b.discount ? 0 : a.discount > b.discount ? -1 : 1;
+    if (a.discount === b.discount) {
+      return a.name === b.name ? 0 : a.name > b.name ? 1 : -1;
+    } else return a.discount > b.discount ? -1 : 1;
   });
+  console.log(categProducts.sort());
   createCakes();
   createPastries();
   createGlutenF();
@@ -407,7 +419,11 @@ function sortByDiscount() {
 
 let sortByAvailability = () => {
   categProducts.sort(function comparator(a, b) {
-    return a.low === b.low ? 0 : a.low > b.low ? 1 : -1;
+    if (a.low === b.low) {
+      if (a.discount == b.discount) {
+        return a.name === b.name ? 0 : a.name > b.name ? 1 : -1;
+      } else return a.discount > b.discount ? -1 : 1;
+    } else return a.low > b.low ? 1 : -1;
   });
   console.log(categProducts.sort());
   createCakes();
