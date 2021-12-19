@@ -182,7 +182,7 @@ const categProducts = [
       "https://images.squarespace-cdn.com/content/v1/538500e4e4b0fa9e95efc7b9/1474392514481-YP6YDWSILDGN2OL8VUDD/adj_GF_TurtleCC.png?format=500w",
     alt: "image of a gluten free turtle cheesecake",
     discount: true,
-    low: true,
+    low: false,
     out: false,
   },
 
@@ -204,7 +204,7 @@ const categProducts = [
       "https://www.chriskitchen.com.au/wp-content/uploads/2020/08/homepage-header-cake.png",
     alt: "image of a gluten free caramel cake",
     discount: true,
-    low: false,
+    low: true,
     out: false,
   },
 ];
@@ -311,6 +311,15 @@ function createPastries() {
         pastryDiv.className = "out";
       }
 
+      if (categProducts[idx].discount && categProducts[idx].low) {
+        pastryImg.classList.remove("low");
+        pastryImg.classList.add("discount");
+        pastrySpan.innerHTML = "<br> Discount! Best Price!!";
+        pastrySpan2 = document.createElement("span");
+        pastryP.appendChild(pastrySpan2);
+        pastrySpan2.innerHTML = "<br> Only Few Pastries&nbsp;Left!!";
+        pastrySpan2.style.color = "rgb(224, 67, 88)";
+
       // if (categProducts[idx].discount && categProducts[idx].low) {
       //   const changeContent = (() => {
       //     const classes = ["low", "discount"];
@@ -334,7 +343,8 @@ function createPastries() {
       //   })();
 
       //   setInterval(changeContent, 2000);
-      // }
+
+      }
     }
   }
 }
@@ -373,6 +383,15 @@ function createGlutenF() {
         glutenfDiv.className = "out";
       }
 
+      if (categProducts[idx].discount && categProducts[idx].low) {
+        glutenfImg.classList.remove("low");
+        glutenfImg.classList.add("discount");
+        glutenfSpan.innerHTML = "<br> Discount! Best Price!!";
+        glutenfSpan2 = document.createElement("span");
+        glutenfP.appendChild(glutenfSpan2);
+        glutenfSpan2.innerHTML = "<br> Only Few Cakes&nbsp;Left!!";
+        glutenfSpan2.style.color = "rgb(224, 67, 88)";
+
       // if (categProducts[idx].discount && categProducts[idx].low) {
       //   const changeContent = (() => {
       //     const classes = ["low", "discount"];
@@ -396,7 +415,7 @@ function createGlutenF() {
       //   })();
 
       //   setInterval(changeContent, 2000);
-      // }
+      }
     }
   }
 }
@@ -408,6 +427,7 @@ function sortByDiscount() {
 
   categProducts.sort(function comparator(a, b) {
     if (a.discount === b.discount) {
+      
       return a.name === b.name ? 0 : a.name > b.name ? 1 : -1;
     } else return a.discount > b.discount ? -1 : 1;
   });
