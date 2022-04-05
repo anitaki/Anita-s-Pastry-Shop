@@ -3,7 +3,7 @@ const categProducts = [
     category: "cakes",
     name: "Chocolate Truffle Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2015/11/chocolate_truffle_cake.png",
+      "https://www.pngkit.com/png/full/21-212017_chocolate-cake-png-la-rocca-chocolate-truffle-cake.png",
     alt: "image of a chocolate truffle cake",
     discount: true,
     low: true,
@@ -14,7 +14,7 @@ const categProducts = [
     category: "cakes",
     name: "Almond fudge cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2015/11/300256-Jamocha-Almond-Fudge_B_small.png",
+      "https://giftdeliverycanada.s3-accelerate.amazonaws.com/catalog/Cakes/Regular%20Cake/Jamocha%20Almond%20Fudge%20Cake.png",
     alt: "iimage of an almond fudge cake",
     discount: true,
     low: true,
@@ -25,7 +25,7 @@ const categProducts = [
     category: "cakes",
     name: "Carrot Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2015/11/300188-Carrot_B_small.png",
+      "https://giftdeliverycanada.s3-accelerate.amazonaws.com/catalog/Cakes/Regular%20Cake/Carrot%20Cake.png",
     alt: "image of a carrot cake",
     discount: true,
     low: false,
@@ -36,7 +36,7 @@ const categProducts = [
     category: "cakes",
     name: "Italian Rum Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2017/06/italian_rum_cake.png",
+      "https://lh3.googleusercontent.com/ArqhfVOORmvWvPIZBI68OhoA22fB-gEPBdUelWTIFsPcXk4aCjJ8qpRinVDoP3w1tqgcSFRu87hRt2cBkFHHWLiIIPQk1ecbTsz7dRO2EeJepSYyJI9FVoqjBjmLS6ypzzKG6KuyMA=w1920-h1080",
     alt: "image of italian rum cake",
     discount: false,
     low: true,
@@ -47,7 +47,7 @@ const categProducts = [
     category: "cakes",
     name: "Everything Chocolate Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2021/03/300606-Everything-Chocolate_small-1.png",
+      "https://againstthegraingourmet.com/assets/images/products/chocolatecropped.png",
     alt: "image of an everything chocolate cake",
     discount: false,
     low: false,
@@ -58,7 +58,7 @@ const categProducts = [
     category: "cakes",
     name: "Milk Chocolate Caramel Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2015/11/300273-Milk-Chocolate-Caramel-Cake_small.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX1m526ga0fSGtK8fhbbvlA7wWv70LN_3ijA&usqp=CAU",
     alt: "image of a milk chocolate caramel cake",
     discount: false,
     low: false,
@@ -69,7 +69,7 @@ const categProducts = [
     category: "cakes",
     name: "Apple Crumble Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2021/06/300771-Apple-Crumble_B_small.png",
+      "https://thecakebox.com.mt/wp-content/uploads/2020/04/Apple-Crumble-26cm-23.00.png",
     alt: "image of an apple crumble cake",
     discount: true,
     low: false,
@@ -80,7 +80,7 @@ const categProducts = [
     category: "cakes",
     name: "Caramel Crunch Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2015/11/300317_B-small.png",
+      "https://giftdeliverycanada.s3-accelerate.amazonaws.com/catalog/Cakes/Regular%20Cake/The%20Original%20Super%20Caramel%20Crunch%E2%84%A2%20Cake.png",
     alt: "image of a caramel crunch cake",
     discount: false,
     low: false,
@@ -91,7 +91,7 @@ const categProducts = [
     category: "cakes",
     name: "Cherry Noire Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2020/01/300669-Classic-Black-Forest_B_small.png",
+      "https://www.redsugar.in/application/modules/itemmanage/assets/images/big/R938fb32ac524d44fec0258999385bbcb.png",
     alt: "image of a cherry noire cake",
     discount: false,
     low: false,
@@ -102,7 +102,7 @@ const categProducts = [
     category: "cakes",
     name: "Brown Butter Caramel Praline Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2021/06/300770-Brown-Butter-Caramel-Praline_B_small.png",
+      "https://images.squarespace-cdn.com/content/v1/5cc23d9516b6401e5613927b/1579914702096-U1Z3A9FCWCJ0NC6C38V8/ke17ZwdGBToddI8pDm48kH6dLahkWZjl4qQgBJa8JkNZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwu_8raSl3LltzRHeMa5YI3PYx0Xg-sH8JLwncmhGfDgE0p3j2obI6Ph5_3mZGEMuU/Affogato_300449_B.png?format=original",
     alt: "image of a brown butter caramel praline cake",
     discount: false,
     low: false,
@@ -113,18 +113,18 @@ const categProducts = [
     category: "cakes",
     name: "Summer Bliss Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2020/01/300626-Summer-Bliss_B_small.png",
+      "https://www.sugarplumdesserts.com/wp-content/uploads/ofg-6in-raspberry-keylime-mousse-chse2-800x614.png",
     alt: "image of a summer bliss cake",
     discount: false,
-    low: false,
-    out: true,
+    low: true,
+    out: false,
   },
 
   {
     category: "cakes",
     name: "White Chocolate Cranberry Truffle&nbsp;Cake",
     imageURI:
-      "https://www.laroccacakes.com/wp-content/uploads/2018/09/300341_B.png",
+      "https://giftdeliverycanada.s3-accelerate.amazonaws.com/catalog/Cakes/Regular%20Cake/White%20Chocolate%20Cranberry%20Truffle%20Cake.png",
     alt: "image of white chocolate cranberry truffle cake",
     discount: false,
     low: false,
